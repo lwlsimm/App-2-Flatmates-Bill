@@ -4,6 +4,8 @@ import webbrowser
 from fpdf import FPDF
 from filestack import Client
 
+#An api key is needed from filestack for the FileSharer function: https://dev.filestack.com 
+
 class PdfReport:
     def __init__(self, filename):
         self.filename = filename
@@ -34,7 +36,8 @@ class PdfReport:
         webbrowser.open('file://' + os.path.realpath(f"files/{self.filename}"))
 
 class FileSharer:
-    def __init__(self, filepath, api_key="AhpLMFnXJSaONvr2NXOeBz"):
+    #insert api file key below
+    def __init__(self, filepath, api_key=""):
         self.filepath = filepath
         self.api_key = api_key
 
